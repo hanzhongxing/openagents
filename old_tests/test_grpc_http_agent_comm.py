@@ -283,7 +283,7 @@ async def grpc_worker_agent(network_with_config):
     # Create worker agent with thread messaging enabled
     agent = MockWorkerAgent(
         agent_id="grpc-test-agent",
-        mod_names=["openagents.mods.communication.thread_messaging"]
+        mod_names=["openagents.mods.workspace.messaging"]
     )
     
     try:

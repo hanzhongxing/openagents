@@ -24,7 +24,7 @@ from pathlib import Path
 from unittest.mock import Mock, AsyncMock
 from typing import Dict, Any, List
 
-from openagents.mods.communication.thread_messaging import (
+from openagents.mods.workspace.messaging import (
     ThreadMessagingAgentAdapter,
     ThreadMessagingNetworkMod,
     Event,
@@ -43,7 +43,7 @@ def wrap_message_for_mod(inner_message) -> Event:
     return Event(
         event_name="mod.thread_messaging.message_received", 
         source_id=inner_message.source_id, 
-        relevant_mod="openagents.mods.communication.thread_messaging", 
+        relevant_mod="openagents.mods.workspace.messaging", 
         payload=inner_message.model_dump(),
         destination_id=inner_message.source_id
     )

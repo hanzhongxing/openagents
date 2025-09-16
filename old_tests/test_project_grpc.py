@@ -130,7 +130,7 @@ class TestProjectGRPC:
         # Load mods manually for testing
         from openagents.utils.mod_loaders import load_network_mods
         mod_configs = [
-            {"name": "openagents.mods.communication.thread_messaging", "enabled": True, "config": {}},
+            {"name": "openagents.mods.workspace.messaging", "enabled": True, "config": {}},
             {"name": "openagents.mods.workspace.default", "enabled": True, "config": {}},
             {"name": "openagents.mods.project.default", "enabled": True, "config": {}}
         ]
@@ -156,7 +156,7 @@ class TestProjectGRPC:
         self.echo_agent = ProjectEchoAgentRunner(
             "test-echo-agent",
             echo_prefix="TestWorker",
-            protocol_names=["openagents.mods.communication.thread_messaging"]
+            protocol_names=["openagents.mods.workspace.messaging"]
         )
         
         # Give the network more time to be fully ready for gRPC connections

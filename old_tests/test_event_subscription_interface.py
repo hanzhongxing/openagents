@@ -67,7 +67,7 @@ class TestEventSubscriptionInterface:
                 "transport": "websocket",
                 "mods": [
                     {
-                        "name": "openagents.mods.communication.thread_messaging",
+                        "name": "openagents.mods.workspace.messaging",
                         "enabled": True,
                         "config": {}
                     },
