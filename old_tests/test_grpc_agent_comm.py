@@ -134,12 +134,12 @@ async def worker_agents(network_with_config):
     # Create worker agents with thread messaging enabled
     agent1 = TestWorkerAgent(
         agent_id="test-agent-1",
-        mod_names=["openagents.mods.communication.thread_messaging"]
+        mod_names=["openagents.mods.workspace.messaging"]
     )
     
     agent2 = TestWorkerAgent(
         agent_id="test-agent-2", 
-        mod_names=["openagents.mods.communication.thread_messaging"]
+        mod_names=["openagents.mods.workspace.messaging"]
     )
     
     try:
@@ -180,8 +180,8 @@ class TestGrpcAgentCommunication:
         print("✅ Agents have correct IDs")
         
         # Test 2: Verify thread messaging adapters are loaded
-        adapter1 = agent1.get_mod_adapter("openagents.mods.communication.thread_messaging")
-        adapter2 = agent2.get_mod_adapter("openagents.mods.communication.thread_messaging")
+        adapter1 = agent1.get_mod_adapter("openagents.mods.workspace.messaging")
+        adapter2 = agent2.get_mod_adapter("openagents.mods.workspace.messaging")
         assert adapter1 is not None, "Agent1 should have thread messaging adapter"
         assert adapter2 is not None, "Agent2 should have thread messaging adapter"
         print("✅ Thread messaging adapters are loaded")
@@ -232,7 +232,7 @@ class TestGrpcAgentCommunication:
         # Test 2: Test channel posting infrastructure
         test_message = "Hello everyone! This is a test channel message."
         try:
-            adapter1 = agent1.get_mod_adapter("openagents.mods.communication.thread_messaging")
+            adapter1 = agent1.get_mod_adapter("openagents.mods.workspace.messaging")
             result = await adapter1.send_channel_message(
                 channel="general",
                 text=test_message
@@ -255,8 +255,8 @@ class TestGrpcAgentCommunication:
         print("🔍 Testing channel reply infrastructure...")
         
         # Test 1: Verify reply messaging capability exists
-        adapter1 = agent1.get_mod_adapter("openagents.mods.communication.thread_messaging")
-        adapter2 = agent2.get_mod_adapter("openagents.mods.communication.thread_messaging")
+        adapter1 = agent1.get_mod_adapter("openagents.mods.workspace.messaging")
+        adapter2 = agent2.get_mod_adapter("openagents.mods.workspace.messaging")
         
         # Check that reply methods exist
         assert hasattr(adapter1, 'reply_channel_message'), "Should have reply_channel_message method"
@@ -296,8 +296,8 @@ class TestGrpcAgentCommunication:
         
         try:
             # Test that both agents can send messages
-            adapter1 = agent1.get_mod_adapter("openagents.mods.communication.thread_messaging")
-            adapter2 = agent2.get_mod_adapter("openagents.mods.communication.thread_messaging")
+            adapter1 = agent1.get_mod_adapter("openagents.mods.workspace.messaging")
+            adapter2 = agent2.get_mod_adapter("openagents.mods.workspace.messaging")
             
             # Agent1 sends to Agent2
             result1 = await adapter1.send_direct_message(
@@ -328,8 +328,8 @@ class TestGrpcAgentCommunication:
         print("🔍 Testing multiple channel messaging capability...")
         
         try:
-            adapter1 = agent1.get_mod_adapter("openagents.mods.communication.thread_messaging")
-            adapter2 = agent2.get_mod_adapter("openagents.mods.communication.thread_messaging")
+            adapter1 = agent1.get_mod_adapter("openagents.mods.workspace.messaging")
+            adapter2 = agent2.get_mod_adapter("openagents.mods.workspace.messaging")
             
             # Send messages to different channels
             result1 = await adapter1.send_channel_message(
@@ -365,7 +365,7 @@ class TestGrpcAgentCommunication:
         print("🔍 Testing sequential message sending capability...")
         
         try:
-            adapter1 = agent1.get_mod_adapter("openagents.mods.communication.thread_messaging")
+            adapter1 = agent1.get_mod_adapter("openagents.mods.workspace.messaging")
             
             # Send multiple messages in sequence
             messages = ["First message", "Second message", "Third message"]
