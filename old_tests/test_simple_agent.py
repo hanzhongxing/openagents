@@ -17,7 +17,7 @@ from openagents.lms import (
     GeminiProvider,
     SimpleGenericProvider
 )
-from openagents.models.message_thread import MessageThread
+from openagents.models.event_thread import EventThread
 from openagents.models.messages import Event
 
 
@@ -250,11 +250,11 @@ class TestSimpleAgentRunnerWithMockedAPI:
             )
             
             # Test reaction
-            message_threads = {}
+            event_threads = {}
             thread_id = "test-thread"
             
             await agent.react(
-                message_threads=message_threads,
+                event_threads=event_threads,
                 incoming_thread_id=thread_id,
                 incoming_message=test_message
             )
@@ -295,11 +295,11 @@ class TestSimpleAgentRunnerWithMockedAPI:
         )
         
         # Test reaction
-        message_threads = {}
+        event_threads = {}
         thread_id = "test-thread"
         
         await agent.react(
-            message_threads=message_threads,
+            event_threads=event_threads,
             incoming_thread_id=thread_id,
             incoming_message=test_message
         )
