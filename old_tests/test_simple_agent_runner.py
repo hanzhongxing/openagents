@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../e
 
 from openagents.models.messages import Event, EventNames
 from openagents.models.event import Event
-from openagents.models.message_thread import MessageThread
+from openagents.models.event_thread import EventThread
 from openagents.core.network import create_network
 from openagents.models.network_config import NetworkConfig, NetworkMode
 from openagents.models.transport import TransportType
@@ -62,7 +62,7 @@ def create_testing_simple_agent(agent_id: str = None):
             self.setup_called = False
             self.teardown_called = False
         
-        async def react(self, message_threads: Dict[str, MessageThread], incoming_thread_id: str, incoming_message: Event):
+        async def react(self, event_threads: Dict[str, EventThread], incoming_thread_id: str, incoming_message: Event):
             """Enhanced react method that tracks received messages."""
             # Track received messages for testing
             
