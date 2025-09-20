@@ -387,7 +387,7 @@ class TestThreadMessagingNetworkModRedesigned:
         self.mock_network.send_message.assert_not_called()
     
     @pytest.mark.asyncio
-    async def test_reply_message_threading(self):
+    async def test_reply_event_threading(self):
         """Test reply message threading logic."""
         # First, create an original channel message
         original_inner = ChannelMessage(

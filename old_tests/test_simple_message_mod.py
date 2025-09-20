@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../s
 from openagents.agents.runner import AgentRunner
 from openagents.models.messages import Event, EventNames
 from openagents.models.event import Event
-from openagents.models.message_thread import MessageThread
+from openagents.models.event_thread import EventThread
 from openagents.core.network import create_network
 from openagents.models.network_config import NetworkConfig, NetworkMode
 from openagents.models.transport import TransportType
@@ -44,7 +44,7 @@ class SimpleMessageAgent(AgentRunner):
         self.received_messages = []
         self.is_ready = False
         
-    async def react(self, message_threads: Dict[str, MessageThread], incoming_thread_id: str, incoming_message: Event):
+    async def react(self, event_threads: Dict[str, EventThread], incoming_thread_id: str, incoming_message: Event):
         """React to incoming messages using simple message protocol."""
         logger.info(f"🎯 Agent {self.client.agent_id} received message!")
         logger.info(f"   From: {incoming_message.source_id}")
