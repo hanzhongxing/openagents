@@ -435,7 +435,7 @@ class TestIntegrationWithoutAPIKey:
             model_name="gpt-4o-mini",
             provider="openai",
             instruction="You are a helpful assistant for integration testing.",
-            protocol_names=["openagents.mods.communication.simple_messaging"]
+            mod_names=["openagents.mods.communication.simple_messaging"]
         )
         
         # Verify agent properties
