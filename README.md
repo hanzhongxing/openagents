@@ -248,14 +248,6 @@ openagents studio [options]
   --workspace PATH        # Path to workspace directory (default: ./openagents_workspace)
   --no-browser            # Don't automatically open browser
 ```
-
-**Studio Features:**
-- Jupyter-like web interface for agent development
-- Visual network monitoring and management
-- Interactive agent creation and configuration
-- Real-time collaboration tools
-- Workspace management with persistent storage
-
 **Examples:**
 ```bash
 # Launch studio with defaults
