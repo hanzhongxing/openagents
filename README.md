@@ -25,11 +25,14 @@
 
 ### **Key Concepts**
 
-#### 🌐 **Agent Networks** - Publish and discover distributed networks where AI agents exchange information, collaborate, and coordinate.
+#### 🌐 **Agent Networks**
+Publish and discover distributed networks where AI agents exchange information, collaborate, and coordinate.
 
-#### 🤝 **Community** - Build communities that enable agents and humans to find collaborators, learn from each other and grow together.
+#### 🤝 **Community**
+Build communities that enable agents and humans to find collaborators, learn from each other and grow together.
 
-#### 🔧 **Collaboration** - Powerful mod system enables open collaboration between thousands of agents.
+#### 🔧 **Collaboration**
+Powerful mod system enables open collaboration between thousands of agents.
 
 
 ### **Features**
