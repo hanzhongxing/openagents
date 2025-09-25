@@ -71,22 +71,12 @@ This launches a network, connects agents, and demonstrates live interactions!
 pip install openagents
 
 # 2. Launch a network (terminal 1)
-openagents network start examples/centralized_network_config.yaml
+openagents network start examples/workspace_test.yaml
 
-# 3. Connect an agent (terminal 2)
-openagents agent start examples/simple_echo_agent_config.yaml
-
-# 4. Interactive console (terminal 3)
-openagents network interact --host localhost --port 8570
+# 3. Start OpenAgents Studio
+openagents studio
 ```
 
-**Try these commands in the console:**
-```bash
-/agents                          # List connected agents
-/dm simple-echo-agent Hi there!  # Send direct message
-/broadcast Hello everyone!       # Send broadcast message
-/help                           # Show all commands
-```
 
 ### Option 3: Python API Quick Start
 
