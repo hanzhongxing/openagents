@@ -237,52 +237,6 @@ openagents network interact --host localhost --port 8570
 # List running networks
 openagents network list --status
 ```
-
-### 🤖 **Agent Management**
-
-```bash
-# Agent Commands
-openagents agent <action> [options]
-
-# Create Agents
-openagents agent create <template> [options]
-  --name NAME             # Agent name
-  --network ID            # Network to connect to
-
-# Start Agents
-openagents agent start <config> [options]
-  --network ID            # Network ID to connect to (overrides config)
-  --host HOST             # Server host address (overrides config)
-  --port PORT             # Server port (overrides config)
-  --detach                # Run in background
-
-# Stop Agents
-openagents agent stop <name>  # Stop specific agent
-
-# List Agents
-openagents agent list [options]
-  --network ID            # Filter by network
-
-# Agent Logs
-openagents agent logs <name> [options]
-  --follow                # Follow log output
-```
-
-**Examples:**
-```bash
-# Start agent from YAML config
-openagents agent start examples/worker_agent_config_example.yaml
-
-# Start with network override
-openagents agent start my_agent.yaml --network "ProductionNet"
-
-# Start with connection overrides
-openagents agent start agent.yaml --host 192.168.1.100 --port 8570
-
-# List all agents
-openagents agent list
-```
-
 ### 🎨 **OpenAgents Studio**
 
 ```bash
