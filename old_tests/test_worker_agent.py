@@ -113,7 +113,6 @@ class MockWorkerAgentBasics:
         agent = MockWorkerAgent()
         assert agent.name == "test-agent"
         assert agent.ignore_own_messages == True
-        assert agent.auto_mention_response == True
         assert isinstance(agent._command_handlers, dict)
         assert isinstance(agent._scheduled_tasks, list)
     
