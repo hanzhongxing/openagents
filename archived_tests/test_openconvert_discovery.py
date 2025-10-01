@@ -110,8 +110,8 @@ class TestOpenConvertDiscovery:
         
         # Connect to network
         success = await client.connect_to_server(
-            host=self.host,
-            port=self.port,
+            network_host=self.host,
+            network_port=self.port,
             metadata={
                 "name": f"Test Agent {agent_id}",
                 "type": "conversion_service",
