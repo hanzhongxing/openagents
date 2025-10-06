@@ -132,7 +132,7 @@ from openagents.models.agent_config import AgentConfig
 
 class SimpleWorkerAgent(WorkerAgent):
     
-    default_agent_id = "charlie"
+    default_agent_id = "alex"
 
     async def on_startup(self):
         ws = self.workspace()
@@ -143,13 +143,14 @@ class SimpleWorkerAgent(WorkerAgent):
         await ws.agent(context.source_id).send(f"Hello {context.source_id}!")
     
     async def on_channel_post(self, context: ChannelMessageContext):
-        self.run_agent(
+        await self.run_agent(
             context=context,
             instruction="Reply to the message with a short response"
         )
 
 if __name__ == "__main__":
     agent_config = AgentConfig(
+        instruction="You are Alex.",
         model_name="gpt-4o-mini",
         provider="openai",
         api_base="https://api.openai.com/v1"
