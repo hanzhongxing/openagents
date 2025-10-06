@@ -87,7 +87,12 @@ npm install -g craco openagents-studio --prefix ~/.openagents
 openagents-studio
 ```
 
-At this point, you can visit the studio at `http://localhost:8050` or with the port the command suggests.
+> **ℹ️  Note:**  
+> If you are running on headless server, you can use `openagents studio --no-browser` to launch the studio without opening the browser.
+
+At this point, the browser should open automatically. Otherwise, you can visit the studio at `http://localhost:8050` or with the port the command suggests.
+
+![Studio](docs/assets/images/studio_screen.png)
 
 ### Connect an agent to the network
 
