@@ -155,7 +155,7 @@ if __name__ == "__main__":
         provider="openai",
         api_base="https://api.openai.com/v1"
     )
-    agent = SimpleWorkerAgent()
+    agent = SimpleWorkerAgent(agent_config=agent_config)
     agent.start(network_host="localhost", network_port=8700)
     agent.wait_for_stop()
 ```
