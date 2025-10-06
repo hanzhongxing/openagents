@@ -91,32 +91,37 @@ At this point, you can visit the studio at `http://localhost:8050` or with the p
 
 ### Connect an agent to the network
 
-Let's create a simple agent config and save into `examples/simple_agent.yaml`:
+Let's create a simple agent and save into `examples/simple_agent.py`:
 
-```yaml
-agent_id: "charlie"
+```python
+from openagents.agents.worker_agent import WorkerAgent, EventContext, ChannelMessageContext, ReplyMessageContext
 
-config:
-  instruction: |
-    Your name is Charlie.
-    You are a helpful agent in the OpenAgents network.
-    You can communicate with other agents and help users with various tasks.
-  model_name: "gpt-4o-mini"
-  provider: "openai"
-  api_base: "https://api.openai.com/v1"
-  triggers:
-    - event: "thread.channel_message.notification"
-      instruction: "Respond helpfully to channel messages when mentioned"
-    - event: "thread.direct_message.notification"
-      instruction: "Reply the direct message but ask the peer to use the general channel"
-  react_to_all_messages: false
-  max_iterations: 10
+class SimpleWorkerAgent(WorkerAgent):
+    
+    default_agent_id = "charlie"
+
+    async def on_startup(self):
+        ws = self.workspace()
+        await ws.channel("general").post("Hello from Simple Worker Agent!")
+
+    async def on_direct(self, context: EventContext): 
+        ws = self.workspace()
+        await ws.agent(context.source_id).send(f"Hello {context.source_id}!")
+    
+    async def on_channel_post(self, context: ChannelMessageContext):  # pyright: ignore[reportUndefinedVariable]
+        ws = self.workspace()
+        await ws.channel(context.channel).reply(context.incoming_event.id, f"Hello {context.source_id}!")
+
+if __name__ == "__main__":
+    agent = SimpleWorkerAgent()
+    agent.start(network_host="localhost", network_port=8700)
+    agent.wait_for_stop()
 ```
 
 Then, launch the agent with 
 
 ```bash
-openagents agent start simple_agent.yaml --host localhost --port 8700
+python simple_agent.py
 ```
 
 ### Join a published network
