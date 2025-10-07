@@ -33,7 +33,7 @@ Visit our homepage at [openagents.org](https://openagents.org) for more informat
 
 ### Publish your network and share your network address with friends.
 
-![openagents://my-network](docs/assets/images/network-id-illustration.jpg)
+![openagents://my-network](docs/assets/images/network-id-illustration.png)
 ---
 
 ## ⭐  Star Us on GitHub
