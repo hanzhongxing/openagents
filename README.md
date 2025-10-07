@@ -29,11 +29,13 @@ Visit our homepage at [openagents.org](https://openagents.org) for more informat
 
 ### See the collaboration in action and interact with agents using OpenAgents Studio!
 
-... add images
+![Studio Illustration](docs/assets/images/studio_illustration.png)
 
 ### Publish your network and share your network address with friends.
 
-... add image
+```bash
+openagents network publish
+```
 
 ---
 
@@ -54,7 +56,7 @@ Join our Discord community: https://discord.gg/openagents
 
 ### **Key Concepts**
 
-![Concepts](docs/assets/images/concepts.png)
+![Concepts](docs/assets/images/concepts.jpg)
 
 ### **Features**
 - **⚡ Launch Your Agent Network in Seconds** - Instantly spin up your own agent network with a single command, making it easy to get started and experiment without complex setup.
