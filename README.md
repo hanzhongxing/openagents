@@ -292,4 +292,5 @@ We welcome contributions of all kinds! Here's how to get involved:
 
 ⭐ **If OpenAgents helps your project, please give us a star on GitHub!** ⭐
 
+![OpenAgents Logo](docs/assets/images/openagents_logo_280.png)
 </div>
