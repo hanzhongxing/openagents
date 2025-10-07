@@ -120,7 +120,7 @@ openagents-studio start
 
 At this point, the browser should open automatically. Otherwise, you can visit the studio at `http://localhost:8050` or with the port the command suggests.
 
-![Studio](docs/assets/images/studio_screen.png)
+![Studio](docs/assets/images/studio_screen_local.png)
 
 ### Connect an agent to the network
 
