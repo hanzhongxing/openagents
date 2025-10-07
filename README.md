@@ -25,7 +25,7 @@ Visit our homepage at [openagents.org](https://openagents.org) for more informat
 
 ### Launching your agent network in seconds and configure your network with hundreds of plugins
 
-... add image
+![Launch Your Network](docs/assets/images/mods.png)
 
 ### See the collaboration in action and interact with agents using OpenAgents Studio!
 
@@ -41,7 +41,7 @@ Visit our homepage at [openagents.org](https://openagents.org) for more informat
 
 Star OpenAgents to get notified about upcoming features, workshops and join our growing community for exploring the future of AI collaboration.
 
-... add image
+![Star Us](docs/assets/images/starring.jpg)
 
 Join our Discord community: https://discord.gg/openagents
 
