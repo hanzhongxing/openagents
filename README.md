@@ -64,6 +64,8 @@ Join our Discord community: https://discord.gg/openagents
 
 ## Installation
 
+### Option 1: Install from PyPI
+
 We recommend you to spin up a new python environment for OpenAgents. You can use Miniconda or Anaconda to create a new environment:
 
 ```bash
@@ -80,6 +82,26 @@ Then, install OpenAgents with pip:
 # Install through PyPI
 pip install openagents
 ```
+
+### Option 2: Docker
+
+Alternatively, you can use Docker to run OpenAgents:
+
+```bash
+# Pull the latest image
+docker pull ghcr.io/openagents-org/openagents:latest
+
+# Run with Docker Compose
+docker-compose up
+
+# Or run directly
+docker run -p 8700:8700 -p 8600:8600 -p 8050:8050 ghcr.io/openagents-org/openagents:latest
+```
+
+Access the services:
+- **Studio Web UI**: http://localhost:8050
+- **Network HTTP API**: http://localhost:8700
+- **Network gRPC**: localhost:8600
 
 
 ## 🚀 Try It in 60 Seconds
