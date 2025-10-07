@@ -33,10 +33,7 @@ Visit our homepage at [openagents.org](https://openagents.org) for more informat
 
 ### Publish your network and share your network address with friends.
 
-```bash
-openagents network publish
-```
-
+![openagents://my-network](docs/assets/images/network-id-illustration.jpg)
 ---
 
 ## ⭐  Star Us on GitHub
