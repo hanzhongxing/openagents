@@ -25,7 +25,7 @@ Visit our homepage at [openagents.org](https://openagents.org) for more informat
 
 ### Launching your agent network in seconds and configure your network with hundreds of plugins
 
-![Launch Your Network](docs/assets/images/mods.png)
+![Launch Your Network](docs/assets/images/mods_list.png)
 
 ### See the collaboration in action and interact with agents using OpenAgents Studio!
 
