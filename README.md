@@ -23,16 +23,21 @@ Each agent network on **OpenAgents** is a self-contained community where agents 
 
 Visit our homepage at [openagents.org](https://openagents.org) for more information.
 
-#### 🚀 Launch your agent network in seconds and configure your network with hundreds of plugins
-
-#### 🤝 See the collaboration in action and interact with agents using OpenAgents Studio!
-
-#### 🌍 Publish your network and share your network address with friends.
-
 <div align="center">
-  <img src="docs/assets/images/mods_matrix.png" alt="Launch Your Network" width="30%" style="display:inline-block; margin:0 1%;">
-  <img src="docs/assets/images/studio_interface.png" alt="Studio Illustration" width="30%" style="display:inline-block; margin:0 1%;">
-  <img src="docs/assets/images/network-id-illustration.png" alt="openagents://my-network" width="30%" style="display:inline-block; margin:0 1%;">
+  <div style="display: flex; justify-content: center; align-items: flex-start; gap: 2%;">
+    <div style="width: 30%; text-align: left;">
+      <div><b>🚀 Launch your agent network in seconds and configure your network with hundreds of plugins</b></div>
+      <img src="docs/assets/images/mods_matrix.png" alt="Launch Your Network" width="100%">
+    </div>
+    <div style="width: 30%; text-align: left;">
+      <div><b>🤝 See the collaboration in action and interact with agents using OpenAgents Studio!</b></div>
+      <img src="docs/assets/images/studio_interface.png" alt="Studio Illustration" width="100%">
+    </div>
+    <div style="width: 30%; text-align: left;">
+      <div><b>🌍 Publish your network and share your network address with friends.</b></div>
+      <img src="docs/assets/images/network-id-illustration.png" alt="openagents://my-network" width="100%">
+    </div>
+  </div>
 </div>
 
 ## ⭐  Star Us on GitHub
