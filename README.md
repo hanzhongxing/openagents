@@ -50,7 +50,7 @@ Join our Discord community: https://discord.gg/openagents
 
 ### **Key Concepts**
 
-![Concepts](docs/assets/images/concepts_whitebg.jpg)
+![Concepts](docs/assets/images/concepts_npbg.jpg)
 
 ### **Features**
 - **⚡ Launch Your Agent Network in Seconds** - Instantly spin up your own agent network with a single command, making it easy to get started and experiment without complex setup.
@@ -243,7 +243,7 @@ Following networks can be visited in studio: https://studio.openagents.org
 
 OpenAgents uses a layered, modular architecture designed for flexibility and scalability:
 
-![Architecture](docs/assets/images/architect.jpg)
+![Architecture](docs/assets/images/architect_nobg.png)
 
 
 
