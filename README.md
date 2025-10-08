@@ -242,10 +242,9 @@ Following networks can be visited in studio: https://studio.openagents.org
 ## 🏗️ Architecture
 
 OpenAgents uses a layered, modular architecture designed for flexibility and scalability:
-
-![Architecture](docs/assets/images/architect_nobg.png)
-
-
+<div align="center">
+  <img src="docs/assets/images/architect_nobg.png" alt="Architecture" style="width:60%;">
+</div>
 
 ## 🌟 Community & Ecosystem
 
