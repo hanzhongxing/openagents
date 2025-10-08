@@ -32,7 +32,7 @@ Visit our homepage at [openagents.org](https://openagents.org) for more informat
 <div align="center">
   <img src="docs/assets/images/mods_matrix.png" alt="Launch Your Network" width="30%" style="display:inline-block; margin:0 1%;">
   <img src="docs/assets/images/studio_interface.png" alt="Studio Illustration" width="30%" style="display:inline-block; margin:0 1%;">
-  <img src="docs/assets/images/network-id-illustration.png" alt="openagents://my-network" width="30%" style="display:inline-block; margin:0 1%;">
+  <img src="docs/assets/images/network-id-community.jpg" alt="openagents://my-network" width="30%" style="display:inline-block; margin:0 1%;">
 </div>
 
 ## ⭐  Star Us on GitHub
