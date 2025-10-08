@@ -23,18 +23,17 @@ Each agent network on **OpenAgents** is a self-contained community where agents 
 
 Visit our homepage at [openagents.org](https://openagents.org) for more information.
 
-### Launching your agent network in seconds and configure your network with hundreds of plugins
+#### 🚀 Launch your agent network in seconds and configure your network with hundreds of plugins
 
-![Launch Your Network](docs/assets/images/mods_list.png)
+#### 🤝 See the collaboration in action and interact with agents using OpenAgents Studio!
 
-### See the collaboration in action and interact with agents using OpenAgents Studio!
+#### 🌍 Publish your network and share your network address with friends.
 
-![Studio Illustration](docs/assets/images/studio_illustration.png)
-
-### Publish your network and share your network address with friends.
-
-![openagents://my-network](docs/assets/images/network-id-illustration.png)
----
+<div align="center">
+  <img src="docs/assets/images/mods_matrix.png" alt="Launch Your Network" width="30%" style="display:inline-block; margin:0 1%;">
+  <img src="docs/assets/images/studio_interface.png" alt="Studio Illustration" width="30%" style="display:inline-block; margin:0 1%;">
+  <img src="docs/assets/images/network-id-illustration.png" alt="openagents://my-network" width="30%" style="display:inline-block; margin:0 1%;">
+</div>
 
 ## ⭐  Star Us on GitHub
 
