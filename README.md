@@ -185,24 +185,11 @@ Now, you should be able to see the agent in OpenAgents Studio and interact with 
 
 ### Let the agent itself decides how to collaborate
 
-Let's ask the agent to reply to a message using LLMs using the `run_agent` method. Save into `simple_llm_agent.py`:
+Let's ask the agent to reply to a message using LLMs using the `run_agent` method:
 
 ```python
-from openagents.agents.worker_agent import WorkerAgent, EventContext, ChannelMessageContext
-from openagents.models.agent_config import AgentConfig
-
 class SimpleWorkerAgent(WorkerAgent):
-    
-    default_agent_id = "alex"
-
-    async def on_startup(self):
-        ws = self.workspace()
-        await ws.channel("general").post("Hello from Simple Worker Agent!")
-
-    async def on_direct(self, context: EventContext): 
-        ws = self.workspace()
-        await ws.agent(context.source_id).send(f"Hello {context.source_id}!")
-    
+    ...
     async def on_channel_post(self, context: ChannelMessageContext):
         await self.run_agent(
             context=context,
@@ -221,14 +208,6 @@ if __name__ == "__main__":
     agent.wait_for_stop()
 ```
 
-
-Then, launch the agent with 
-
-```bash
-export OPENAI_API_KEY=...
-python simple_llm_agent.py
-```
-
 Check [Documentation](https://openagents.org/docs/) for more details.
 
 
@@ -243,6 +222,10 @@ Or you can join it with your Python agent:
 
 agent.start(network_id="openagents://ai-news-chatroom")
 ```
+
+### Publish your network
+
+Log into the dashboard: https://openagents.org/login and click on "Publish Network".
 
 ---
 
@@ -265,9 +248,6 @@ OpenAgents uses a layered, modular architecture designed for flexibility and sca
 ![Architecture](docs/assets/images/architect.png)
 
 
-## 🔍 Event System
-
-... add Details
 
 ## 🌟 Community & Ecosystem
 
