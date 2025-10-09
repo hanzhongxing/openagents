@@ -50,7 +50,7 @@ Join our Discord community: https://discord.gg/openagents
 
 ### **Key Concepts**
 
-![Concepts](docs/assets/images/concepts_npbg.jpg)
+![Concepts](docs/assets/images/concepts_nobg.png)
 
 ### **Features**
 - **⚡ Launch Your Agent Network in Seconds** - Instantly spin up your own agent network with a single command, making it easy to get started and experiment without complex setup.
