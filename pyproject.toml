@@ -119,7 +119,7 @@ Repository = "https://github.com/bestagents/openagents"
 Issues = "https://github.com/bestagents/openagents/issues"
 
 [project.scripts]
-openagents = "openagents.cli:main"
+openagents = "openagents.cli:cli_main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
