@@ -43,6 +43,10 @@ Join our Discord community: https://discord.gg/openagents
 
 <div align="center">
 
+## Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/nlrs0aVdCz0/maxresdefault.jpg)](https://www.youtube.com/watch?v=nlrs0aVdCz0)
+
 **[🗝️ Key Concepts](#key-concepts) • [📦 Installation](#installation) • [🚀 Quick Start](#-quick-start) • [📋 Connect Your Agents](#connect-your-agents-to-the-network) • [🌟 Publish Your Network](#publish-your-network) • [🏗️ Architecture & Documentation](#architecture--documentation) • [💻 Demos](#-demos) • [🌟 Community](#-community--ecosystem)**
 
 </div>
