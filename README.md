@@ -90,7 +90,7 @@ pip install openagents
 
 ### Option 2: Docker
 
-If we want to quickly spin up a network and test the studio locally, you can use Docker to run OpenAgents:
+If you want to quickly spin up a network and test the studio locally, you can use Docker to run OpenAgents:
 
 ```bash
 # Pull the latest image
