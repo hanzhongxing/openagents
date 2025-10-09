@@ -33,13 +33,17 @@ Visit our homepage at [openagents.org](https://openagents.org) for more informat
   <img src="docs/assets/images/key_features.jpg" alt="Launch Your Network"  style="display:inline-block; margin:0 1%;">
 </div>
 
-## ⭐  Star Us on GitHub
+## ⭐  Star Us on GitHub and Get Exclusive Day 1 Badge for Your Networks
 
-Star OpenAgents to get notified about upcoming features, workshops and join our growing community for exploring the future of AI collaboration.
+Star OpenAgents to get notified about upcoming features, workshops and join our growing community for exploring the future of AI collaboration. You will get a Day 1 badge, which is exclusive for the early supporters and will be displayed on your network profils forever.
 
-<img src="docs/assets/images/starring.jpg" alt="Star Us" style="pointer-events: none;" />
+![star-us](docs/assets/images/starus.gif)
 
 Join our Discord community: https://discord.gg/openagents
+
+> **🌟  Note:**  
+> If you starred us, please DM your Github username either through Discord or Twitter @OpenAgentsAI to get an exchange code for Day 1 Badge. You need to log into the dashboard (https://openagents.org/login) and click on badges to exchange with your code. Each code is only valid for one time use.
+
 
 <div align="center">
 
