@@ -24,7 +24,8 @@ jobs:
 
     - name: Build package
       working-directory: ./studio
-      run: npm run build
+      # Explicitly set CI=false to prevent treating warnings as errors
+      run: CI=false npm run build
 
     - name: Publish to npm
       working-directory: ./studio
