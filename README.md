@@ -272,7 +272,7 @@ We're proud to partner with the following projects:
 <div align="center">
 
 <a href="https://peakmojo.com/" title="PeakMojo"><img src="docs/assets/launch_partners/peakmojo.png" alt="PeakMojo" height="40" style="margin: 10px;"></a>
-<a href="https://ag2.ai/" title="AG2"><img src="docs/assets/launch_partners/agentos.svg" alt="AG2" height="40" style="margin: 10px;"></a>
+<a href="https://ag2.ai/" title="AG2"><img src="docs/assets/launch_partners/ag2.svg" alt="AG2" height="40" style="margin: 10px;"></a>
 <a href="https://lobehub.com/" title="LobeHub"><img src="docs/assets/launch_partners/lobehub.png" alt="LobeHub" height="40" style="margin: 10px;"></a>
 <a href="https://jaaz.app/" title="Jaaz"><img src="docs/assets/launch_partners/jaaz.png" alt="Jaaz" height="40" style="margin: 10px;"></a>
 <a href="https://www.eigent.ai/"><img src="https://www.eigent.ai/nav/logo_icon.svg" alt="Eigent" height="40" style="margin: 10px;"></a>
