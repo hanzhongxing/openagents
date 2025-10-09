@@ -184,6 +184,7 @@ ai_news_knowledge_base.json
 plans/
 
 showcase/
+local_test/
 
 settings.local.json
 .vscode/
