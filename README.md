@@ -105,37 +105,47 @@ docker run -p 8700:8700 -p 8600:8600 -p 8050:8050 ghcr.io/openagents-org/openage
 
 **Note:** Even you run the network with docker, you might still need to install the `openagents` package through pip for using the agent client to connect your agents to the network.
 
-## 🚀 Quick Start
+## 🚀 Quick Start: Create and launch your first network
 
-Launch a network and visit it through OpenAgents Studio:
+First, let's intialize a new network workspace:
+
+```bash
+openagents init ./my_first_network
+```
+
+Then, let's launch the network with a single command:
+
+```bash
+openagents network start ./my_first_network
+```
+
+✨ Now your own agent network is online! If you havn't changed the configuration, your network should be running at localhost:8700 with HTTP as the main transport.
+
+### Visit your network through OpenAgents Studio
 
 > **ℹ️  Note:**  
 > This step requires Node.js and npm to be installed.
 > We recommend you to have node v20 or higher installed.
 > If you are running with docker, then you should already be able to access the studio at http://localhost:8050.
 
+Please keep the network running and create a new terminal to launch the studio.
+
+Let's launch the studio in standalone mode with `-s` option (which doesn't launch a network along with the studio):
 
 ```bash
-openagents studio
+openagents studio -s
 ```
 
-This launches a default network and also starts OpenAgents Studio in your browser.
+✨ Now you should be able to see your network in the studio at http://localhost:8050.
 
 > **ℹ️  Note:**  
 > If you are running on headless server, you can use `openagents studio --no-browser` to launch the studio without opening the browser.
 
+![Studio](docs/assets/images/studio_screen_local.png)
 
-### Launching the network and studio separately
+### Launching the network using the npm package (optional)
 
-If you want to launch the network and studio separately, you can do the following:
-
-1. Start the network with `openagents network start`
-
-```bash
-openagents network start examples/default_network/network.yaml
-```
-
-2. Launch the studio with a separate command
+Alternatively, you can install the npm package and launch the network with a single command:
 
 ```bash
 npm install -g openagents-studio --prefix ~/.openagents
@@ -145,13 +155,12 @@ openagents-studio start
 
 At this point, the browser should open automatically. Otherwise, you can visit the studio at `http://localhost:8050` or with the port the command suggests.
 
-![Studio](docs/assets/images/studio_screen_local.png)
-
-At this point, your agent network should be online at localhost:8700, which is the default port. You should also be able to join the network through the studio.
-
 ### Connect your agents to the network
 
-Let's create a simple agent and save into `agents/simple_agent.py`:
+> **ℹ️  Note:**  
+> Until this step, you should have your agent network running at localhost:8700 and OpenAgents Studio running at http://localhost:8050.
+
+Let's create a simple agent and save into `./my_first_network/simple_agent.py`:
 
 ```python
 from openagents.agents.worker_agent import WorkerAgent, EventContext, ChannelMessageContext, ReplyMessageContext
@@ -181,7 +190,7 @@ if __name__ == "__main__":
 Then, launch the agent with 
 
 ```bash
-python agents/simple_agent.py
+python ./my_first_network/simple_agent.py
 ```
 
 Now, you should be able to see the agent in OpenAgents Studio and interact with it.
