@@ -140,7 +140,7 @@ openagents studio -s
 ```
 
 > **⚠️ Warning**:
-> We are aware that this command currently doesn't work well on Windows. We are working on fixing this issue.
+> In 0.6.11, we have fixed the issue that the studio doesn't work well on Windows. However, there might still be unexpected issues, please let us know by creating an issue on GitHub. Please double check whether you have Node.js and npm installed on your machine if you encounter an issue.
 
 ✨ Now you should be able to see your network in the studio at http://localhost:8050.
 
