@@ -89,7 +89,7 @@ pip install openagents
 ```
 
 > **💡 Important:**  
-> From this point on, please make sure your openagents version is at least 0.6.10. Please run `pip install -U openagents` to upgrade to the latest version.
+> From this point on, please make sure your openagents version is at least 0.6.11. Please run `pip install -U openagents` to upgrade to the latest version.
 
 ### Option 2: Docker
 
