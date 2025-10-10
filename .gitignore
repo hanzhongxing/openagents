@@ -188,3 +188,6 @@ local_test/
 
 settings.local.json
 .vscode/
+
+# Network database
+network.db

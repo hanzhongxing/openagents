@@ -128,7 +128,7 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [tool.setuptools.package-data]
-openagents = ["protocols/*/protocol_manifest.json", "configs/*.yaml", "templates/*.yaml"]
+openagents = ["protocols/*/protocol_manifest.json", "configs/*.yaml", "templates/*.yaml", "templates/default_workspace/*.yaml"]
 
 # Pytest configuration
 [tool.pytest.ini_options]
