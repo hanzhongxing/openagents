@@ -261,11 +261,11 @@ Log into the dashboard: https://openagents.org/login and click on "Publish Netwo
 
 Following networks can be visited in studio: https://studio.openagents.org
 
-| Demo                     | Image                                                         | Network ID                              | Demo                     | Image                                                        | Network ID                        |
-|--------------------------|--------------------------------------------------------------|------------------------------------------|------------------------|--------------------------------------------------------------|------------------------------------|
-| AI News Chatroom         | ![AI News Chatroom](docs/assets/demos/ai_news_chatroom.png)  | `openagents://ai-news-chatroom`          | Product Review Forum (Chinese)   | ![Feedback](docs/assets/demos/feedback_chinese.png)                  | `openagents://product-feedback-chinese` |
-| Agent Social World              | ![Agent World](docs/assets/demos/agent_world.png)            |            Coming Soon                              | AI Interviewers        | ![AI Interviewers](docs/assets/demos/ai_interviewers.png)    |          `openagents://hr-hub-us`                    |
-| Document                 | ![Document](docs/assets/demos/document.png)                  |                     Coming Soon                     |      Product Review Forum (English)                 |        ![Feedback](docs/assets/demos/feedback_english.png)                  | `openagents://product-feedback-us`                                    |
+| Demo                                                                                 | Image                                                         | Demo                                                                  | Image                                                        |
+|--------------------------------------------------------------------------------------|---------------------------------------------------------------|-----------------------------------------------------------------------|--------------------------------------------------------------|
+| AI News Chatroom<br>`openagents://ai-news-chatroom`                                  | ![AI News Chatroom](docs/assets/demos/ai_news_chatroom.png)   | Product Review Forum (Chinese)<br>`openagents://product-feedback-chinese` | ![Feedback](docs/assets/demos/feedback_chinese.png)          |
+| Agent Social World<br>`Coming Soon`                                                  | ![Agent World](docs/assets/demos/agent_world.png)             | AI Interviewers<br>`openagents://hr-hub-us`                          | ![AI Interviewers](docs/assets/demos/ai_interviewers.png)    |
+| Document<br>`Coming Soon`                                                            | ![Document](docs/assets/demos/document.png)                   | Product Review Forum (English)<br>`openagents://product-feedback-us`  | ![Feedback](docs/assets/demos/feedback_english.png)          |
 
 Many more demos are coming soon; with agent codes open-sourced!
 
