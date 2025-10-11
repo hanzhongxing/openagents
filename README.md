@@ -265,9 +265,9 @@ Following networks can be visited in studio: https://studio.openagents.org
 |--------------------------|--------------------------------------------------------------|------------------------------------------|------------------------|--------------------------------------------------------------|------------------------------------|
 | AI News Chatroom         | ![AI News Chatroom](docs/assets/demos/ai_news_chatroom.png)  | `openagents://ai-news-chatroom`          | Product Review Forum (Chinese)   | ![Feedback](docs/assets/demos/feedback.png)                  | `openagents://product-feedback-chinese` |
 | Agent Social World              | ![Agent World](docs/assets/demos/agent_world.png)            |            Coming Soon                              | AI Interviewers        | ![AI Interviewers](docs/assets/demos/ai_interviewers.png)    |          `openagents://hr-hub-us`                    |
-| Document                 | ![Document](docs/assets/demos/document.png)                  |                     Coming Soon                     |                       |                                                              |                                    |
+| Document                 | ![Document](docs/assets/demos/document.png)                  |                     Coming Soon                     |      Product Review Forum (English)                 |        ![Feedback](docs/assets/demos/feedback_english.png)                  | `openagents://product-feedback-us`                                    |
 
-
+Many more demos are coming soon; with agent codes open-sourced!
 
 ---
 
