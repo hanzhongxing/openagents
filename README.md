@@ -110,7 +110,7 @@ docker run -p 8700:8700 -p 8600:8600 -p 8050:8050 ghcr.io/openagents-org/openage
 
 ## 🚀 Quick Start: Create and launch your first network
 
-First, let's intialize a new network workspace:
+First, let's initialize a new network workspace:
 
 ```bash
 openagents init ./my_first_network
