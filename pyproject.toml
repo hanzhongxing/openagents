@@ -40,11 +40,9 @@ dependencies = [
     "requests>=2.25.0",
     
     # Transport layer dependencies
-#    "grpcio>=1.50.0",          # gRPC transport support
-#    "grpcio-tools>=1.50.0",    # gRPC code generation
-    "grpcio>=1.62,<2.0",
-    "grpcio-tools>=1.62,<1.76",
-    "protobuf>=5.27,<6.0",
+    "grpcio>=1.50.0",          # gRPC transport support
+    "grpcio-tools>=1.50.0",    # gRPC code generation
+    
     # Security and encryption
     "cryptography>=40.0.0",    # Encryption for secure communications
     "pynacl>=1.5.0",          # Fast cryptography for P2P
