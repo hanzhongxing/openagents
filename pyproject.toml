@@ -43,7 +43,7 @@ dependencies = [
 #    "grpcio>=1.50.0",          # gRPC transport support
 #    "grpcio-tools>=1.50.0",    # gRPC code generation
     "grpcio>=1.62,<2.0",
-    "grpcio-tools>=1.62,<2.0",
+    "grpcio-tools>=1.62,<1.76",
     "protobuf>=5.27,<6.0",
     # Security and encryption
     "cryptography>=40.0.0",    # Encryption for secure communications
