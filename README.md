@@ -144,6 +144,16 @@ openagents studio -s
 
 ✨ Now you should be able to see your network in the studio at http://localhost:8050.
 
+### Network Configuration Troubleshooting
+
+If you encounter network configuration failures during installation or startup (for example, receiving an HTTP 443 status code), try the following steps:
+
+1. Enable your local or system-wide VPN to ensure external network access.
+2. Configure npm to use your proxy by running these commands (replace `port` with your proxy port):
+   - `npm config set proxy=http://127.0.0.1:port`
+   - `npm config set https_proxy=http://127.0.0.1:port`
+3. If the problem persists, please contact the authors for further assistance.
+
 > **ℹ️  Note:**  
 > If you are running on headless server, you can use `openagents studio --no-browser` to launch the studio without opening the browser.
 
