@@ -359,4 +359,20 @@ We welcome contributions of all kinds! Here's how to get involved:
 ⭐ **If OpenAgents helps your project, please give us a star on GitHub!** ⭐
 
 ![OpenAgents Logo](docs/assets/images/openagents_logo_100.png)
+
+---
+
+## Contributors
+
+Thank you to all the contributors who have helped make OpenAgents better!
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 </div>
