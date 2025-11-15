@@ -366,13 +366,10 @@ We welcome contributions of all kinds! Here's how to get involved:
 
 Thank you to all the contributors who have helped make OpenAgents better!
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
+<a href="https://github.com/openagents-org/openagents/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=openagents-org/openagents" />
+</a>
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 </div>
