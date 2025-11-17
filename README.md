@@ -359,4 +359,17 @@ We welcome contributions of all kinds! Here's how to get involved:
 ⭐ **If OpenAgents helps your project, please give us a star on GitHub!** ⭐
 
 ![OpenAgents Logo](docs/assets/images/openagents_logo_100.png)
+
+---
+
+## Contributors
+
+Thank you to all the contributors who have helped make OpenAgents better!
+
+
+<a href="https://github.com/openagents-org/openagents/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=openagents-org/openagents" />
+</a>
+
+
 </div>
