@@ -225,7 +225,6 @@ volumes:
 ```bash
 docker run -p 8700:8700 -p 8600:8600 -p 8050:8050 \
   -v "$(pwd)/my-network:/network:ro" \
-  -v openagents-data:/app/data \
   ghcr.io/openagents-org/openagents:latest
 ```
 
