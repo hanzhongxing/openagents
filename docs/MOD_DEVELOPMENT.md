@@ -22,7 +22,9 @@ A typical mod directory structure looks like this:
 
 ```
 my_mod/
-├── __init__.py           # Mod implementation
+├── __init__.py           # Package initialization
+├── mod.py                # Network-level mod implementation
+├── adapter.py            # Agent-level adapter implementation
 ├── eventdef.yaml         # Event definition file
 ├── README.md             # Documentation
 └── tests/                # Unit tests (optional)
