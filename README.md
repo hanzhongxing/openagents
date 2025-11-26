@@ -331,6 +331,17 @@ We welcome contributions of all kinds! Here's how to get involved:
 ![OpenAgents Logo](docs/assets/images/openagents_logo_100.png)
 
 ---
+## Contributors
+
+Thank you to all the contributors who have helped make OpenAgents better!
+
+
+<a href="https://github.com/openagents-org/openagents/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=openagents-org/openagents" />
+</a>
+
+</div>
+
 
 ## Changelog
 
@@ -353,15 +364,3 @@ We welcome contributions of all kinds! Here's how to get involved:
 - General stability improvements
 
 ---
-
-## Contributors
-
-Thank you to all the contributors who have helped make OpenAgents better!
-
-
-<a href="https://github.com/openagents-org/openagents/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=openagents-org/openagents" />
-</a>
-
-
-</div>
