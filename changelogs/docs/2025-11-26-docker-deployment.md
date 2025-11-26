@@ -212,7 +212,7 @@ services:
       - "8600:8600"
       - "8050:8050"
     volumes:
-      - ./my-network:/network:ro    # Your network config (read-only)
+      - ./my-network:/network    # Your network config
     environment:
       - PYTHONUNBUFFERED=1
 
@@ -224,7 +224,7 @@ volumes:
 
 ```bash
 docker run -p 8700:8700 -p 8600:8600 -p 8050:8050 \
-  -v "$(pwd)/my-network:/network:ro" \
+  -v "$(pwd)/my-network:/network" \
   ghcr.io/openagents-org/openagents:latest
 ```
 
@@ -232,10 +232,10 @@ docker run -p 8700:8700 -p 8600:8600 -p 8050:8050 \
 
 | Mount | Path | Mode | Purpose |
 |-------|------|------|---------|
-| Network config | `/network` | `ro` (read-only) | Your network.yaml and configuration |
-| Runtime data | `/app/data` | `rw` (read-write) | Database, logs, runtime state |
+| Network config | `/network` | `rw` | Your network.yaml and configuration |
+| Runtime data | `/app/data` | `rw` | Database, logs, runtime state |
 
-**Note:** The network folder is mounted read-only (`:ro`) since the container only needs to read the configuration. Runtime data (database, logs) is stored in `/app/data`.
+**Note:** The network folder is mounted. Runtime data (database, logs) is stored in `/app/data`.
 
 ## Port Mapping
 

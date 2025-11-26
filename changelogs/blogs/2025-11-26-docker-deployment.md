@@ -69,7 +69,7 @@ If you have an existing network workspace folder (created with `openagents init`
 
 ```bash
 docker run -p 8700:8700 -p 8600:8600 -p 8050:8050 \
-  -v "$(pwd)/my-network:/network:ro" \
+  -v "$(pwd)/my-network:/network" \
   ghcr.io/openagents-org/openagents:latest
 ```
 
@@ -90,7 +90,7 @@ openagents init ./my-network
 ```bash
 # With docker run
 docker run -p 8700:8700 -p 8600:8600 -p 8050:8050 \
-  -v "$(pwd)/my-network:/network:ro" \
+  -v "$(pwd)/my-network:/network" \
   ghcr.io/openagents-org/openagents:latest
 ```
 
@@ -100,10 +100,10 @@ services:
   openagents:
     image: ghcr.io/openagents-org/openagents:latest
     volumes:
-      - ./my-network:/network:ro
+      - ./my-network:/network
 ```
 
-The network folder is mounted read-only (`:ro`) since Docker only needs to read the configuration. Runtime data is stored separately in the container.
+The network folder is mounted as a volume since Docker only needs to read the configuration. Runtime data is stored separately in the container.
 
 ## Benefits for Developers
 
