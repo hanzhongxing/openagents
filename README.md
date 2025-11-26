@@ -334,9 +334,13 @@ We welcome contributions of all kinds! Here's how to get involved:
 
 ## Changelog
 
-### v0.6.15
+### v0.6.16
+
 - **Studio no longer requires Node.js** - The `openagents studio` command now runs without Node.js or npm dependencies. The Studio frontend is pre-built and bundled with the PyPI package. Given the change, we will no longer have guarantee for the npm package `openagents-studio` to be updated with the latest version.
+
+### v0.6.15
 - Added shared cache mod for agents to share data with each other
+- Project mode is supported in the studio
 
 ### v0.6.14
 - Project mode is released
