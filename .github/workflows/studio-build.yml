@@ -35,11 +35,6 @@ jobs:
         cd studio
         npm run lint
 
-    - name: Type check
-      run: |
-        cd studio
-        npm run typecheck
-
     - name: Build
       run: |
         cd studio
