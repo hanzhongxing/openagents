@@ -189,6 +189,9 @@ local_test/
 
 settings.local.json
 .vscode/
+demos/*/mods/
+demos/*/network.db
+
 
 # Network database
 network.db
