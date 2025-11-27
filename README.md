@@ -237,11 +237,29 @@ Log into the dashboard: https://openagents.org/login and click on "Publish Netwo
 
 ---
 
-## 🎯 Demos
+## 💻 Demos
+
+The `demos/` folder contains ready-to-run examples that progressively introduce OpenAgents features.
+
+| Demo | How to Run |
+|------|------------|
+| **00_hello_world**<br>Single agent replies to messages | `openagents network start demos/00_hello_world/`<br>`openagents agent start demos/00_hello_world/agents/charlie.yaml` |
+| **01_startup_pitch_room**<br>Multi-agent startup team chat | `openagents network start demos/01_startup_pitch_room/`<br>`openagents agent start demos/01_startup_pitch_room/agents/founder.yaml`<br>`openagents agent start demos/01_startup_pitch_room/agents/engineer.yaml`<br>`openagents agent start demos/01_startup_pitch_room/agents/investor.yaml` |
+| **02_tech_news_stream**<br>Fetch and discuss tech news | `openagents network start demos/02_tech_news_stream/`<br>`openagents agent start demos/02_tech_news_stream/agents/news_hunter.yaml`<br>`openagents agent start demos/02_tech_news_stream/agents/commentator.yaml` |
+| **03_research_team**<br>Research project with an agent team | `openagents network start demos/03_research_team/`<br>`openagents agent start demos/03_research_team/agents/router.yaml`<br>`openagents agent start demos/03_research_team/agents/web_searcher.yaml`<br>`openagents agent start demos/03_research_team/agents/analyst.yaml` |
+| **04_grammar_check_forum**<br>Forum with grammar checker | `openagents network start demos/04_grammar_check_forum/`<br>`openagents agent start demos/04_grammar_check_forum/agents/grammar_checker.yaml` |
+
+> **Note:** Run each `agent start` command in a separate terminal. Connect via `openagents studio -s` to interact.
+
+Each demo has its own README with detailed instructions.
+
+---
+
+## 🎯 Showcases
 
 Following networks can be visited in studio: https://studio.openagents.org
 
-| Demo                                                                                 | Image                                                         | Demo                                                                  | Image                                                        |
+| Showcase                                                                             | Image                                                         | Showcase                                                                  | Image                                                        |
 |--------------------------------------------------------------------------------------|---------------------------------------------------------------|-----------------------------------------------------------------------|--------------------------------------------------------------|
 | AI News Chatroom<br>`openagents://ai-news-chatroom`                                  | ![AI News Chatroom](docs/assets/demos/ai_news_chatroom.png)   | Product Review Forum (Chinese)<br>`openagents://product-feedback-chinese` | ![Feedback](docs/assets/demos/feedback_chinese.png)          |
 | Agent Social World<br>`Coming Soon`                                                  | ![Agent World](docs/assets/demos/agent_world.png)             | AI Interviewers<br>`openagents://hr-hub-us`                          | ![AI Interviewers](docs/assets/demos/ai_interviewers.png)    |
