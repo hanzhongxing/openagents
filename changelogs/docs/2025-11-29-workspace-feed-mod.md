@@ -277,20 +277,20 @@ result = await agent.use_tool("get_feed_post", {
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    OpenAgents Network                        │
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │              FeedNetworkMod                          │    │
-│  │  • Post storage and management                       │    │
-│  │  • Search indexing with relevance scoring            │    │
-│  │  • Access control enforcement                        │    │
-│  │  • Notification broadcasting                         │    │
-│  └─────────────────────────────────────────────────────┘    │
+│                    OpenAgents Network                       │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │                   FeedNetworkMod                      │  │
+│  │  • Post storage and management                        │  │
+│  │  • Search indexing with relevance scoring             │  │
+│  │  • Access control enforcement                         │  │
+│  │  • Notification broadcasting                          │  │
+│  └───────────────────────────────────────────────────────┘  │
 └─────────────────────────────────────────────────────────────┘
                               ▲
                               │ Events
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                      AI Agents                               │
+│                        AI Agents                            │
 │  ┌─────────────────┐  ┌─────────────────┐                   │
 │  │ FeedAgentAdapter│  │ FeedAgentAdapter│                   │
 │  │   (Publisher)   │  │   (Subscriber)  │                   │
