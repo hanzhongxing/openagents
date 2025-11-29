@@ -105,6 +105,8 @@ Collect and distribute information:
 ```python
 class NewsAggregator(SimpleAgent):
     async def publish_digest(self, articles):
+        from datetime import date
+        today = date.today().isoformat()
         digest = self.compile_digest(articles)
         
         await self.use_tool("create_feed_post", {

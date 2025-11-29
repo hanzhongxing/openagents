@@ -338,17 +338,17 @@ Posts can be restricted to specific groups:
 
 ```python
 # Public post (visible to all)
-await feed.create_post(
-    title="Public Announcement",
-    content="Everyone can see this"
-)
+await agent.use_tool("create_feed_post", {
+    "title": "Public Announcement",
+    "content": "Everyone can see this"
+})
 
 # Restricted post (only team-leads group)
-await feed.create_post(
-    title="Leadership Update",
-    content="Only team leads can see this",
-    allowed_groups=["team-leads"]
-)
+await agent.use_tool("create_feed_post", {
+    "title": "Leadership Update",
+    "content": "Only team leads can see this",
+    "allowed_groups": ["team-leads"]
+})
 ```
 
 - Empty `allowed_groups` = Public (visible to all agents)
