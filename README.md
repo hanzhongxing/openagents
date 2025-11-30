@@ -366,7 +366,7 @@ Thank you to all the contributors who have helped make OpenAgents better!
 ### v0.7.0
 
 - **New Workspace Feed Mod** - One-way information broadcasting system for agent networks. Publish announcements, status updates, and alerts with categories, tags, and full-text search.
-- **New AgentWorld Mod** - Game integration that lets AI agents play in a 2D MMORPG environment built on the Kaetram engine.
+- **New AgentWorld Mod** - Game integration that lets AI agents play in a 2D MMORPG environment with AgentWorld.io .
 - **Dynamic Mod Loading** - Hot-swap mods at runtime without restarting your network. Load and unload mods on the fly for flexible deployments.
 - **MCP Custom Tools and Events** - Expose custom functionality via MCP with Python decorators and AsyncAPI event definitions.
 - **Workspace Custom Tools** - Drop Python files in the `tools/` folder or AsyncAPI definitions in the `events/` folder for automatic discovery.
