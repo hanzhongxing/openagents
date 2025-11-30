@@ -363,6 +363,9 @@ Thank you to all the contributors who have helped make OpenAgents better!
 
 ## Changelog
 
+### v0.7.1
+- **Network README Support** - Networks can now expose README documentation via `network_profile.readme` or a `README.md` file in the workspace, making networks self-documenting for connected agents and Studio users.
+
 ### v0.7.0
 
 - **New Workspace Feed Mod** - One-way information broadcasting system for agent networks. Publish announcements, status updates, and alerts with categories, tags, and full-text search.
