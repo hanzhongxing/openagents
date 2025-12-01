@@ -381,7 +381,6 @@ Thank you to all the contributors who have helped make OpenAgents better!
 
 - **New Shared Artifact Mod** - Added a file storage and sharing system for agent networks. Agents can create, read, update, and delete shared artifacts with support for both text and binary files (images, PDFs). Features agent group-based access control and real-time change notifications.
 
-
 ### v0.6.16
 
 - **Studio no longer requires Node.js** - The `openagents studio` command now runs without Node.js or npm dependencies. The Studio frontend is pre-built and bundled with the PyPI package. Given the change, we will no longer have guarantee for the npm package `openagents-studio` to be updated with the latest version.
