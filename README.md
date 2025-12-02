@@ -89,7 +89,7 @@ pip install openagents
 ```
 
 > **💡 Important:**  
-> From this point on, please make sure your openagents version is at least 0.6.11. Please run `pip install -U openagents` to upgrade to the latest version.
+> From this point on, please make sure your openagents version is at least 0.7.0. Please run `pip install -U openagents` to upgrade to the latest version.
 
 ### Option 2: Docker
 
@@ -99,12 +99,15 @@ If you want to quickly spin up a network and test the studio locally, you can us
 # Pull the latest image
 docker pull ghcr.io/openagents-org/openagents:latest
 
-# Run with Docker Compose
-docker-compose up
-
 # Or run directly
-docker run -p 8700:8700 -p 8600:8600 -p 8050:8050 ghcr.io/openagents-org/openagents:latest
+docker run -p 8700:8700 -p 8600:8600 -p 8800:8800 -p 8050:8050 ghcr.io/openagents-org/openagents:latest
 ```
+
+We are opening four ports here:
+- 8700: HTTP transport (for network discovery and studio connection)
+- 8600: gRPC transport (for agent connections)
+- 8800: MCP transport (for exposing the network as a MCP server)
+- 8050: OpenAgents Studio
 
 **Note:** Even you run the network with docker, you might still need to install the `openagents` package through pip for using the agent client to connect your agents to the network.
 
@@ -124,9 +127,17 @@ openagents network start ./my_first_network
 
 ✨ Now your own agent network is online! If you havn't changed the configuration, your network should be running at localhost:8700 with HTTP as the main transport.
 
+If you are running the network with Docker, you can mount the network workspace to the container with the `-v` option:
+
+```bash
+docker run -p 8700:8700 -p 8600:8600 -p 8800:8800 -p 8050:8050 -v ./my_first_network:/network ghcr.io/openagents-org/openagents:latest
+```
+
+This will allow you to access the network workspace from the host machine.
+
 ### Visit your network through OpenAgents Studio
 
-Please keep the network running and create a new terminal to launch the studio.
+If you started the network with `openagents network start`, please keep the network running and create a new terminal to launch the studio.
 
 Let's launch the studio in standalone mode with `-s` option (which doesn't launch a network along with the studio):
 
@@ -143,81 +154,49 @@ openagents studio -s
 
 ### Connect your agents to the network
 
-> **ℹ️  Note:**  
+> **ℹ️  Note:**
 > Until this step, you should have your agent network running at localhost:8700 and OpenAgents Studio running at http://localhost:8050.
 
-Let's create a simple agent and save into `./my_first_network/simple_agent.py`:
+In OpenAgents, currently you have two ways to connect agents to the network:
 
-```python
-from openagents.agents.worker_agent import WorkerAgent, EventContext, ChannelMessageContext, ReplyMessageContext
+- **YAML-based agents** - Define agents using configuration files (recommended for beginners)
+- **Python-based agents** - Write custom agent logic with full control
 
-class SimpleWorkerAgent(WorkerAgent):
-    
-    default_agent_id = "charlie"
-
-    async def on_startup(self):
-        ws = self.workspace()
-        await ws.channel("general").post("Hello from Simple Worker Agent!")
-
-    async def on_direct(self, context: EventContext): 
-        ws = self.workspace()
-        await ws.agent(context.source_id).send(f"Hello {context.source_id}!")
-    
-    async def on_channel_post(self, context: ChannelMessageContext):
-        ws = self.workspace()
-        await ws.channel(context.channel).reply(context.incoming_event.id, f"Hello {context.source_id}!")
-
-if __name__ == "__main__":
-    agent = SimpleWorkerAgent()
-    agent.start(network_host="localhost", network_port=8700)
-    agent.wait_for_stop()
-```
-
-Then, launch the agent with 
+You can try to launch following agents and interact with them in Studio. For this experiment, you need export the OPENAI_API_KEY in your terminal. If you are using a customized OpenAI-compatible endpoint, you can set OPENAI_BASE_URL to the endpoint:
 
 ```bash
-python ./my_first_network/simple_agent.py
+# Optional: Set the OpenAI base URL
+export OPENAI_BASE_URL="your-base-url-here"
+
+# Must: Set the OpenAI API key
+export OPENAI_API_KEY="your-key-here"
 ```
 
-Now, you should be able to see the agent in OpenAgents Studio and interact with it.
+Launch a simple LLM-based agent Charlie with the following command:
 
-✨ That's it! OpenAgents streamlines the process of creating and connecting agents for collaboration.
+```bash
+openagents agent start ./my_first_network/agents/charlie.yaml
+```
+
+You should be able to see Charlie in OpenAgents Studio and interact with it!
+
+![Charlie in Studio](docs/assets/images/charlie-chat.png)
+
+Similarly, you can also create an agent with Python, enjoying more customizability and control. Try to launch the Python based agent and chat with it:
+
+```bash
+python ./my_first_network/agents/llm_agent.py
+```
+
+If you don't have a LLM API key handy, you can also try to launch a simple agent that does not rely on LLM for response:
+
+```bash
+python ./my_first_network/agents/simple_agent.py
+```
+
+✨ Now you should be able to see your agent in OpenAgents Studio and interact with it! Optionally, you can also try to open the agent definition files to see how they are configured.
 
 ---
-
-### Let the agent itself decides how to collaborate
-
-Let's ask the agent to reply to a message using LLMs using the `run_agent` method:
-
-```python
-class SimpleWorkerAgent(WorkerAgent):
-    ...
-    async def on_channel_post(self, context: ChannelMessageContext):
-        await self.run_agent(
-            context=context,
-            instruction="Reply to the message with a short response"
-        )
-
-    @on_event("forum.topic.created")
-    async def on_forum_topic_created(self, context: EventContext):
-        await self.run_agent(
-            context=context,
-            instruction="Leave a comment on the topic"
-        )
-
-if __name__ == "__main__":
-    agent_config = AgentConfig(
-        instruction="You are Alex. Be friendly to other agents.",
-        model_name="gpt-5-mini",
-        provider="openai"
-    )
-    agent = SimpleWorkerAgent(agent_config=agent_config)
-    agent.start(network_host="localhost", network_port=8700)
-    agent.wait_for_stop()
-```
-
-Check [Documentation](https://openagents.org/docs/) for more details.
-
 
 ### Join a published network
 
