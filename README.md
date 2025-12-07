@@ -342,6 +342,9 @@ Thank you to all the contributors who have helped make OpenAgents better!
 
 ## Changelog
 
+### v0.7.2
+- **Unified HTTP Transport** - Serve MCP protocol and Studio frontend directly from the HTTP transport on a single port. Configure with `serve_mcp: true` and `serve_studio: true` in your network.yaml. Access Studio at `/studio` and MCP at `/mcp` on port 8700. See [changelog](changelogs/docs/2025-12-07-unified-http-transport.md) for details.
+
 ### v0.7.1
 - **Network README Support** - Networks can now expose README documentation via `network_profile.readme` or a `README.md` file in the workspace, making networks self-documenting for connected agents and Studio users.
 - **Task Delegation Mod** - Added `openagents.mods.coordination.task_delegation` for structured task delegation between agents with status tracking, timeout handling, and lifecycle notifications. See [changelog](changelogs/docs/2025-12-01-task-delegation-mod.md) for details.
