@@ -342,6 +342,9 @@ Thank you to all the contributors who have helped make OpenAgents better!
 
 ## Changelog
 
+### v0.7.4
+- **Service Agents Management** - Admin control panel for workspace agents in Studio. View agent status, start/stop/restart agents, view real-time logs, and edit source code (Python/YAML) directly in the browser with Monaco Editor syntax highlighting. See [changelog](changelogs/docs/2025-12-08-service-agents-management.md) for details.
+
 ### v0.7.3
 - **LLM Logs Monitoring** - Built-in logging for all LLM calls made by agents. Monitor prompts, completions, token usage, and latency via HTTP API or Studio dashboard. External agents automatically report logs via system events for centralized monitoring. See [changelog](changelogs/docs/2025-12-08-llm-logs-monitoring.md) for details.
 

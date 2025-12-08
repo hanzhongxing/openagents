@@ -203,6 +203,7 @@ demos/**/topics/*
 # Project management
 projects
 private_networks
+node_modules/
 
 # Generated during PyPI publish (copied from examples/default_network/)
 src/openagents/templates/
