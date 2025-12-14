@@ -342,6 +342,9 @@ Thank you to all the contributors who have helped make OpenAgents better!
 
 ## Changelog
 
+### v0.7.6
+- **Studio Internationalization (i18n)** - Full multi-language support for Studio with English, Chinese (Simplified), Japanese, and Korean. Covers all UI components across 20 namespaces. Language preference is auto-detected from browser settings and persisted locally. See [changelog](changelogs/docs/2025-12-13-studio-i18n.md) for details.
+
 ### v0.7.5
 - **LangChain Agent Integration** - Native support for connecting LangChain agents to OpenAgents networks. Wrap any LangChain agent with `LangChainAgentRunner` to join networks, receive events, and use network tools. Includes event filtering (`event_names`, `event_filter`) to control which events trigger your agent, and bidirectional tool conversion between LangChain and OpenAgents formats. See [changelog](changelogs/docs/2025-12-09-langchain-agent-integration.md) for details.
 
