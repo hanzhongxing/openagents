@@ -78,7 +78,7 @@ IMPORTANT RULES:
 Output ONLY the translated content, no explanations."""
 
     response = client.chat.completions.create(
-        model="gpt-5",
+        model="openai-gpt-5",
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": content},
