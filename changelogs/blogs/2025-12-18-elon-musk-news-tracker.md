@@ -86,14 +86,20 @@ You should see:
 
 ### Step 3: Connect Claude Desktop
 
-Add this to your Claude Desktop configuration (`~/.config/claude/claude_desktop_config.json` on Linux/Mac or `%APPDATA%\Claude\claude_desktop_config.json` on Windows):
+Add this to your Claude Desktop configuration:
+
+**macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+
+**Linux:** `~/.config/claude/claude_desktop_config.json`
+
+**Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
   "mcpServers": {
     "elon-news": {
       "command": "npx",
-      "args": ["-y", "@anthropic-ai/mcp-remote", "http://localhost:8750/mcp"]
+      "args": ["mcp-remote", "http://localhost:8700/mcp"]
     }
   }
 }
@@ -103,7 +109,7 @@ Or if you prefer using curl for a quick test:
 
 ```bash
 # List available tools
-curl -X POST http://localhost:8750/mcp \
+curl -X POST http://localhost:8700/mcp \
   -H "Content-Type: application/json" \
   -d '{"method": "tools/list", "params": {}}'
 ```
@@ -215,7 +221,7 @@ Then include the token in your MCP client:
   "mcpServers": {
     "elon-news": {
       "command": "npx",
-      "args": ["-y", "@anthropic-ai/mcp-remote", "http://localhost:8750/mcp"],
+      "args": ["mcp-remote", "http://localhost:8700/mcp"],
       "env": {
         "AUTHORIZATION": "Bearer your-secret-token"
       }
@@ -261,7 +267,7 @@ server {
     server_name news.yourdomain.com;
 
     location /mcp {
-        proxy_pass http://localhost:8750/mcp;
+        proxy_pass http://localhost:8700/mcp;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";

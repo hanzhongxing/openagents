@@ -77,9 +77,9 @@ Expected output:
 
 ```
 INFO:openagents:Starting network: ElonMuskTracker
-INFO:openagents:HTTP transport listening on 0.0.0.0:8750
-INFO:openagents:gRPC transport listening on 0.0.0.0:8650
-INFO:openagents:MCP endpoint available at http://localhost:8750/mcp
+INFO:openagents:HTTP transport listening on 0.0.0.0:8700
+INFO:openagents:gRPC transport listening on 0.0.0.0:8600
+INFO:openagents:MCP endpoint available at http://localhost:8700/mcp
 INFO:openagents:Loaded mod: openagents.mods.workspace.feed
 ```
 
@@ -112,12 +112,12 @@ network:
   transports:
     - type: "http"
       config:
-        port: 8750
-        serve_studio: true   # Web UI at http://localhost:8750
-        serve_mcp: true      # MCP at http://localhost:8750/mcp
+        port: 8700
+        serve_studio: true   # Web UI at http://localhost:8700
+        serve_mcp: true      # MCP at http://localhost:8700/mcp
     - type: "grpc"
       config:
-        port: 8650
+        port: 8600
 
   mods:
     - name: "openagents.mods.workspace.feed"
@@ -174,7 +174,7 @@ python agents/news_collector.py --help
 
 Options:
   --host TEXT      Network host (default: localhost)
-  --port INTEGER   Network port (default: 8750)
+  --port INTEGER   Network port (default: 8700)
   --interval INT   Fetch interval in seconds (default: 300)
 ```
 
@@ -214,9 +214,13 @@ def fetch_custom_rss(url: str, count: int = 10) -> List[Dict]:
 
 ### Claude Desktop Configuration
 
-#### macOS/Linux
+#### macOS
 
-Edit `~/.config/claude/claude_desktop_config.json`:
+Edit `~/Library/Application Support/Claude/claude_desktop_config.json`
+
+#### Linux
+
+Edit `~/.config/claude/claude_desktop_config.json`
 
 ```json
 {
@@ -224,9 +228,8 @@ Edit `~/.config/claude/claude_desktop_config.json`:
     "elon-news-tracker": {
       "command": "npx",
       "args": [
-        "-y",
-        "@anthropic-ai/mcp-remote",
-        "http://localhost:8750/mcp"
+        "mcp-remote",
+        "http://localhost:8700/mcp"
       ]
     }
   }
@@ -243,9 +246,8 @@ Edit `%APPDATA%\Claude\claude_desktop_config.json`:
     "elon-news-tracker": {
       "command": "npx",
       "args": [
-        "-y",
-        "@anthropic-ai/mcp-remote",
-        "http://localhost:8750/mcp"
+        "mcp-remote",
+        "http://localhost:8700/mcp"
       ]
     }
   }
@@ -317,9 +319,8 @@ external_access:
     "elon-news-tracker": {
       "command": "npx",
       "args": [
-        "-y",
-        "@anthropic-ai/mcp-remote",
-        "http://localhost:8750/mcp"
+        "mcp-remote",
+        "http://localhost:8700/mcp"
       ],
       "env": {
         "MCP_HEADERS": "Authorization:Bearer your-secret-token-here"
@@ -333,7 +334,7 @@ external_access:
 
 ### Local Network (Same Machine)
 
-No additional configuration needed. Use `localhost:8750`.
+No additional configuration needed. Use `localhost:8700`.
 
 ### LAN Network (Same Local Network)
 
@@ -349,7 +350,7 @@ No additional configuration needed. Use `localhost:8750`.
      "mcpServers": {
        "elon-news-tracker": {
          "command": "npx",
-         "args": ["-y", "@anthropic-ai/mcp-remote", "http://192.168.1.100:8750/mcp"]
+         "args": [mcp-remote, "http://192.168.1.100:8700/mcp"]
        }
      }
    }
@@ -368,7 +369,7 @@ No additional configuration needed. Use `localhost:8750`.
        ssl_certificate_key /path/to/key.pem;
 
        location / {
-           proxy_pass http://localhost:8750;
+           proxy_pass http://localhost:8700;
            proxy_http_version 1.1;
            proxy_set_header Host $host;
            proxy_set_header X-Real-IP $remote_addr;
@@ -390,7 +391,7 @@ No additional configuration needed. Use `localhost:8750`.
      "mcpServers": {
        "elon-news-tracker": {
          "command": "npx",
-         "args": ["-y", "@anthropic-ai/mcp-remote", "https://news.yourdomain.com/mcp"],
+         "args": [mcp-remote, "https://news.yourdomain.com/mcp"],
          "env": {
            "MCP_HEADERS": "Authorization:Bearer your-secret-token"
          }
@@ -448,7 +449,7 @@ CMD ["./run.sh"]
 
 ```bash
 docker build -t elon-news-tracker .
-docker run -d -p 8750:8750 -p 8650:8650 elon-news-tracker
+docker run -d -p 8700:8700 -p 8600:8600 elon-news-tracker
 ```
 
 ## Troubleshooting
@@ -457,17 +458,17 @@ docker run -d -p 8750:8750 -p 8650:8650 elon-news-tracker
 
 ```bash
 # Check if port is in use
-lsof -i :8750
+lsof -i :8700
 
 # Kill existing process
-kill -9 $(lsof -t -i:8750)
+kill -9 $(lsof -t -i:8700)
 ```
 
 ### Agent Can't Connect
 
 ```bash
 # Verify network is running
-curl http://localhost:8750/health
+curl http://localhost:8700/health
 
 # Check agent logs
 python agents/news_collector.py 2>&1 | tee agent.log
@@ -477,7 +478,7 @@ python agents/news_collector.py 2>&1 | tee agent.log
 
 ```bash
 # Test MCP endpoint directly
-curl -X POST http://localhost:8750/mcp \
+curl -X POST http://localhost:8700/mcp \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc": "2.0", "method": "tools/list", "id": 1}'
 ```
