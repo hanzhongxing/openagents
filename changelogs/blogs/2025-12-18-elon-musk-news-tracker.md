@@ -67,7 +67,7 @@ cd demos/06_elon_musk_tracker
 
 # Option B: Manual (two terminals)
 # Terminal 1:
-openagents launch-network network.yaml
+openagents network start network.yaml
 
 # Terminal 2:
 python agents/news_collector.py

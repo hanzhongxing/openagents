@@ -70,7 +70,7 @@ This starts both the network and the collector agent.
 
 ```bash
 cd demos/06_elon_musk_tracker
-openagents launch-network network.yaml
+openagents network start network.yaml
 ```
 
 Expected output:
