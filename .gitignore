@@ -210,3 +210,9 @@ src/openagents/templates/
 src/openagents/studio/build/
 node_modules/
 
+studio/my_first_network/README.md
+studio/my_first_network/agents/llm_agent.py
+studio/my_first_network/agents/simple_agent.py
+studio/my_first_network/events/.keep
+studio/my_first_network/mods/.keep
+studio/my_first_network/tools/.keep
