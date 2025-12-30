@@ -70,7 +70,7 @@ dependencies = [
 [project.optional-dependencies]
 # P2P networking (optional, for future libp2p integration)
 p2p = [
-    "py-libp2p>=0.2.0",       # P2P networking library
+    "libp2p>=0.2.0",       # P2P networking library
 ]
 
 # WebRTC support (optional, for future WebRTC transport)
