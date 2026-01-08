@@ -188,8 +188,8 @@ showcase/
 local_test/
 
 settings.local.json
-.vscode/
-demos/*/mods/
+.vscode*/
+demos/**/mods/
 demos/*/network.db
 
 
@@ -216,3 +216,5 @@ studio/my_first_network/events/.keep
 studio/my_first_network/mods/.keep
 studio/my_first_network/tools/.keep
 studio/.nvmrc
+
+**/logs/**
